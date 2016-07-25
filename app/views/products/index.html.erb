@@ -1,0 +1,22 @@
+<center><h1>Products</h1></center>
+
+<div class="row products-index">
+
+<% @products.each do |product| %>
+  <!-- You want your pictures in a row of 3 -->
+<div class="col-md-4">
+  <!-- Make a link of product and redirect to the product information-->
+  <h3><a href="/products/<%= product.id %>"><%= product.name %></a></h3>
+  <!-- <p><%= product.created_at.strftime("%m/%d%Y") %></p>-->
+  <!-- This shows all the images on the page -->
+  <h3><a href="/products/<%= product.id %>"></h3>
+  <img src="<%= product.image %>" alt="" class="img-thumbnail">
+  <!-- Display the price and description in the main page -->
+ <h5>Price</h5>
+  <h4>Price: <%= product.price %></h4>
+  <h4>Description: <%= product.description %></h4>
+</div>
+<% end %>
+</div>
+
+<p><%= product.created_at.strftime("%m/%d%Y") %></p>

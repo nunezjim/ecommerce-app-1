@@ -1,0 +1,8 @@
+<h3><%= @product.name %></h3>
+<h5>Price: <%= @product.price %></h5>
+<h5>Description: <%= @product.description %><h5>
+
+<!-- first argument you want to appear "Edit" second is the action you wanted to go to "@product.id"    -->
+<p><%= link_to "Edit your Product", "/products/#{@product.id}/edit" %></p>
+<p><%= link_to "Delete", "/products/#{@product.id}", method: :delete%></p>
+<p><a href="/products">Back to all Products</a><p>
